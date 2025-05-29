@@ -1,11 +1,13 @@
 // Admin Panel for Image Upload
+import { galleryData } from './data.js';
+import { saveGalleryDataToStorage } from './script.js';
 
 // DOM Elements for Admin Panel
 let adminPanel = null;
 let isAdminPanelCreated = false;
 
 // Function to check if admin mode should be activated
-function checkForAdminMode(searchQuery) {
+export function checkForAdminMode(searchQuery) {
   if (searchQuery.toLowerCase() === 'tipsyadmin') {
     createAdminPanel();
   } // else if (adminPanel && adminPanel.style.display === 'block') {

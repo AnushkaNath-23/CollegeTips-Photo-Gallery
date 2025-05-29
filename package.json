@@ -2,7 +2,9 @@
   "name": "college-tips-gallery",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://AnushkaNath-23.github.io/CollegeTips-Photo-Gallery",
   "type": "module",
+"main": "server.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

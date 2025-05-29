@@ -1,3 +1,8 @@
+// Import galleryData from data.js
+import { galleryData } from './data.js';
+// Import admin panel functionality
+import { checkForAdminMode } from './admin-panel.js';
+
 // DOM Elements
 const galleryGrid = document.getElementById('gallery-grid');
 const categoriesWrapper = document.querySelector('.categories-wrapper');
@@ -49,7 +54,7 @@ function loadGalleryDataFromStorage() {
 }
 
 // Save gallery data to localStorage
-function saveGalleryDataToStorage() {
+export function saveGalleryDataToStorage() {
   localStorage.setItem('galleryData', JSON.stringify(galleryData));
 }
 
