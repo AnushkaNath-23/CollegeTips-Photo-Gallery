@@ -1,0 +1,277 @@
+/* Admin Panel Styles */
+.admin-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  z-index: 1000;
+  overflow-y: auto;
+  display: block;
+}
+
+.admin-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.admin-panel-header h2 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-panel-header button {
+  background-color: transparent;
+  color: var(--color-gray-500);
+  padding: var(--space-2);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.admin-panel-header button:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.admin-panel-content {
+  padding: var(--space-6);
+}
+
+#image-upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: var(--space-3);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  background-color: white;
+  color: var(--color-gray-800);
+  font-family: var(--font-family);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input[type="file"] {
+  padding: var(--space-2);
+  border: 1px dashed var(--color-gray-300);
+  background-color: var(--color-gray-50);
+  cursor: pointer;
+}
+
+.image-preview {
+  margin-top: var(--space-2);
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--color-gray-100);
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+#image-upload-form .btn {
+  align-self: flex-end;
+  margin-top: var(--space-2);
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+#image-upload-form .btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tab styles */
+.admin-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: var(--space-4);
+}
+
+.tab-btn {
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-gray-600);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--color-gray-800);
+  background-color: var(--color-gray-50);
+}
+
+.tab-panel {
+  display: block;
+}
+
+.tab-panel.hidden {
+  display: none;
+}
+
+/* Gallery Manager Styles */
+.gallery-manager {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.manager-image-card {
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  /* overflow: hidden; */
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.manager-image-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.manager-image-container {
+  height: 150px;
+  overflow: hidden;
+}
+
+.manager-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manager-image-info {
+  padding: var(--space-3);
+}
+
+.manager-image-info h4 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.manager-image-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.edit-image-btn,
+.delete-image-btn {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.edit-image-btn {
+  background-color: blue;
+  color: white;
+  /* Add any other desired styling for the button */
+}
+
+.delete-image-btn {
+  background-color: red;
+  color: white;
+  /* Add any other desired styling for the button */
+}
+
+.edit-image-btn:hover {
+  background-color: var(--color-blue-600);
+}
+
+.delete-image-btn:hover {
+  background-color: var(--color-red-600);
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .admin-panel {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .admin-panel-header,
+  .admin-panel-content {
+    padding: var(--space-4);
+  }
+  
+  .gallery-manager {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+.edit-image-btn svg,
+.delete-image-btn svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  fill: currentColor; /* Ensure the SVG color matches the button text color */
+}
