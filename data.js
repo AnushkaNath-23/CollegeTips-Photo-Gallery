@@ -2,8 +2,11 @@
 // Starting with an empty array - images will be loaded from the server
 const galleryData = [];
 
+// Export galleryData for use in other modules
+export { galleryData };
+
 // Function to load gallery data from the server
-async function loadGalleryDataFromServer() {
+export async function loadGalleryDataFromServer() {
   try {
     const response = await fetch('/api/images');
     if (!response.ok) {
